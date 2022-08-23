@@ -1,9 +1,16 @@
 import { Button } from "antd";
 import { useCallback, useEffect, useState } from "react"
 import { useTheme } from "next-themes";
-import styles from '../styles/ThemeSwitcher.module.css';
 import MoonIcon from '../assets/icons/moon.svg';
 import SunIcon from '../assets/icons/sun.svg';
+
+const styling: any = {
+  position: 'fixed',
+  zIndex: '1',
+  bottom: '0',
+  right: '0',
+  margin: '2rem'
+}
 
 const ThemeSwitcher = () => {
   const { resolvedTheme, setTheme } = useTheme();
@@ -19,7 +26,7 @@ const ThemeSwitcher = () => {
 
   if(!mounted) return null;
   return (
-    <Button className={styles.btnSwitcher} onClick={toggleTheme} type='link'>
+    <Button style={styling} onClick={toggleTheme} type='link'>
       { resolvedTheme == 'light' ? 
         <MoonIcon style={{width: '32px'}} /> 
         : 
