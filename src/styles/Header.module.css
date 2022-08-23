@@ -1,0 +1,15 @@
+.header {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+.headerContainer {
+  background-color: transparent;
+}
+
+[data-theme='dark'] .headerBorder {
+  border-bottom: 1px solid #4D4D4D !important;
+}
+
+[data-theme='light'] .headerBorder {
+  border-bottom: 1px solid rgb(237, 239, 243) !important;
+};
