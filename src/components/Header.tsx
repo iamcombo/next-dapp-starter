@@ -17,9 +17,7 @@ const Header = () => {
           <Row style={{height: '100%'}} justify='space-between' align='middle'>
             <Col></Col>
             <Col>
-              <div>
-                { client && <ConnectKitButton /> }
-              </div>
+              {client && <ConnectKitButton />}
             </Col>
           </Row>
         </Layout.Header>
