@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import MoonIcon from '../assets/icons/moon.svg';
 import SunIcon from '../assets/icons/sun.svg';
 
-const styling: any = {
+const styling: object = {
   position: 'fixed',
   zIndex: '1',
   bottom: '0',

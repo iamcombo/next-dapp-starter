@@ -1,4 +1,4 @@
-.wrapper {
+.container {
   max-width: 72rem;
   margin: 0 auto;
 }
@@ -31,7 +31,7 @@
 }
 
 @media screen and (max-width: 72rem) {
-  .wrapper {
+  .container {
     padding: 0 2rem;
   }
 }

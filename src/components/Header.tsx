@@ -4,12 +4,13 @@ import { useEffect, useState } from 'react';
 import styles from '../styles/Header.module.css';
 
 const Header = () => {
-  const [client, setClient] = useState<boolean>(false);
+  const [mounted, setMounted] = useState<boolean>(false);
 
   useEffect(() => {
-    setClient(true);
+    setMounted(true);
   },[]);
   
+  if(!mounted) return null;
   return (
     <div>
       <div className={styles.header}>
@@ -17,7 +18,7 @@ const Header = () => {
           <Row style={{height: '100%'}} justify='space-between' align='middle'>
             <Col></Col>
             <Col>
-              {client && <ConnectKitButton />}
+              <ConnectKitButton />
             </Col>
           </Row>
         </Layout.Header>

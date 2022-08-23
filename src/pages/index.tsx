@@ -1,7 +1,6 @@
 import { Col, Row, Card } from 'antd'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Header from '../components/Header'
 import ThemeSwitcher from '../components/ThemeSwitcher'
 import styles from '../styles/Home.module.css'
 import BookIcon from '../assets/icons/book.svg'
@@ -16,9 +15,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
       <ThemeSwitcher />
-      <main className={styles.wrapper}>
+      <div className={styles.container}>
         <div className={styles.emptySpace} />
         <p className={styles.title}>DApp Starter</p>
         <Row>
@@ -117,7 +115,7 @@ const Home: NextPage = () => {
             </Card>
           </Col>
         </Row>
-      </main>
+      </div>
     </div>
   )
 }
