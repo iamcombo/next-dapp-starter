@@ -6,7 +6,7 @@ import Web3Provider from '../components/Web3Provider';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return(
-    <ThemeProvider>
+    <ThemeProvider attribute='class'>
       <Web3Provider>
         <Component {...pageProps} />
       </Web3Provider>
